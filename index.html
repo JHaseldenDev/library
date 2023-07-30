@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My Library</h1>
-    <button id="newBook">NEW BOOK</button>
-    <div id="newBookForm" class="hidden book-form">
-        <form>
-            <input type="text" id="title" placeholder="Title" required>
-            <input type="text" id="author" placeholder="Author" required>
-            <input type="number" id="numPages" placeholder="Number of Pages" required>
-            <label for="hasBeenRead">
-                <input type="checkbox" id="hasBeenRead"> Has been read
-            </label>
-            <button type="submit">Add Book</button>
-        </form>
+    <div class="container">
+        <header>
+            <h1>My Library</h1>
+            <button id="newBook" class="btn">NEW BOOK</button>
+        </header>
+        <div id="newBookForm" class="hidden book-form">
+            <form>
+                <label for="title">
+                    <span>Title</span>
+                    <input type="text" id="title" required>
+                </label>
+                <label for="author">
+                    <span>Author</span>
+                    <input type="text" id="author" required>
+                </label>
+                <label for="numPages">
+                    <span>Number of Pages</span>
+                    <input type="number" id="numPages" required>
+                </label>
+                <label for="hasBeenRead">
+                    <input type="checkbox" id="hasBeenRead">
+                    <span>Has been read</span>
+                </label>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </div>
+        <div id="library"></div>
     </div>
-    <div id="library"></div>
-
-    <script src="scripts.js"></script>
+        <script src="scripts.js"></script>
 </body>
+
 </html>

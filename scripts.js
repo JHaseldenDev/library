@@ -69,6 +69,11 @@ function displayBooks() {
     document.getElementById('hasBeenRead').checked = false;
   });
   
-  document.getElementById('newBook').addEventListener('click', function() {
-    document.getElementById('newBookForm').classList.remove('hidden');
+ document.getElementById('newBook').addEventListener('click', function() {
+    const form = document.getElementById('newBookForm');
+    if(form.classList.contains('hidden')) {
+        form.classList.remove('hidden');
+    } else {
+        form.classList.add('hidden');
+    }
 });
